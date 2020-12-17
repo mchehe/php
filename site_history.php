@@ -1,6 +1,6 @@
 <?php
-fwrite(SITE,'请输入域名：');
-$site=fgets(SITE);
+fwrite(STDOUT,'请输入域名：');
+$site=fgets(STDOUT);
 history($site);
 function history($site){
     $date=geturl('https://web.archive.org/__wb/sparkline?url='.urlencode($site).'&collection=web&output=json');
